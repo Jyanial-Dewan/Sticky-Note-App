@@ -34,7 +34,8 @@ img{
 }
 
 .home-header .container,
-.signin-header .container{
+.signin-header .container,
+.signup-header .container{
     height: 100%;
     width: 86%;
     margin: 0 auto;
@@ -44,18 +45,21 @@ img{
 }
 
 .home-header .container ul,
-.signin-header .container ul{
+.signin-header .container ul,
+.signup-header .container ul{
     display: flex;
     gap: 15px;
 }
 
 .home-header .container ul li a,
-.signin-header .container ul li a{
+.signin-header .container ul li a,
+.signup-header .container ul li a{
     padding-bottom: 3px;
 }
 
 .home-header .container ul li a:hover,
-.signin-header .container ul li a:hover{
+.signin-header .container ul li a:hover,
+.signup-header .container ul li a:hover{
     border-bottom: 2px solid black;
 }
 
@@ -65,6 +69,16 @@ img{
     width: 100%;
     height: 5rem;
     background: hsl(294, 54%, 70%);
+    position: fixed;
+    z-index: 10;
+}
+
+/*Sign-up Header*/
+
+.signup-header{
+    width: 100%;
+    height: 5rem;
+    background: hsl(59, 54%, 70%);
     position: fixed;
     z-index: 10;
 }
@@ -96,6 +110,7 @@ img{
 .showcase .showcase-grid p{
     margin: 1rem auto;
 }
+
 
 .showcase .showcase-grid img{
     width: 400px;
@@ -141,25 +156,35 @@ img{
 .signin{
     height: 100vh;
     background: hsl(294, 54%, 65%);
-    padding-top: 100px;
+    padding-top: 140px;
 }
 
-.signin .container{
+.signup{
+    height: 100vh;
+    background: hsl(59, 54%, 65%);
+    padding-top: 140px;
+}
+
+.signin .container,
+.signup .container{
     width: 80%;
 }
 
-.signin .signin-flex{
+.signin .signin-flex,
+.signup .signup-flex {
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.signin img{
-    width: 400px;
+.signin img,
+.signup img{
+    width: 370px;
 }
 
-.signin .signin-flex .signin-form{
+.signin .signin-flex .signin-form,
+.signup .signup-flex .signup-form{
     height: 370px;
     width:350px;
     background: transparent;
@@ -173,7 +198,8 @@ img{
     
 }
 
-.signin-form .signin-input{
+.signin-form .signin-input,
+.signup-form .signup-input{
     outline: none;
     width: 100%;
     height: 50px;
@@ -185,12 +211,14 @@ img{
     align-items: center;
 }
 
-.signin-form .signin-input input{
+.signin-form .signin-input input,
+.signup-form .signup-input input{
     width: 90%;
     padding: 0 30px;
 }
 
-.signin-form .signin-input i{
+.signin-form .signin-input i,
+.signup-form .signup-input i{
     padding: 10px 30px;
 }
 
@@ -203,14 +231,31 @@ img{
 .signin-form .signin-checkbox a{
     color: hsl(218, 97%, 50%);
     padding-bottom: 2px;
-    border-bottom: 1px solid hsl(218, 97%, 50%);
+    
 }
 
 .signin-form p{
     margin: 10px 0;
 }
 
+/*Signup*/
 
+.signup-form button{
+    margin: 15px 0 5px 0;
+}
+
+.signup-form .social .social-icons{
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup-form .social .social-icons i:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+  
 
 
 /*Utility Classes*/
@@ -232,9 +277,11 @@ img{
 
 .btn{
     padding: 0.5rem 1.7rem;
-    background: linear-gradient(to right, hsl(258, 97%, 60%), hsl(350, 97%, 65%));
+    background: linear-gradient(to right, hsl(258, 97%, 65%), hsl(350, 97%, 65%));
     border-radius: 10px;
     letter-spacing: 2px;
+    transition: 0.2s;
+    cursor: pointer;
 }
  
 .btn:hover{
@@ -281,10 +328,33 @@ img{
     .testimonial{
         height: 150vh;
      }
+
+     .signin .container{
+        width: 86%;
+     }
+
+     .signin img,
+     .signup img{
+        width: 300px;
+    }
+
+    .signin .signin-flex .signin-form,
+    .signup .signup-flex .signup-form{
+        width: 320px;
+        height: 350px;
+    }
+
 }
 
 /*Tablet*/
-@media  screen and (max-width: 768px) {
+@media  screen and (max-width: 800px) {
+
+    .home-header,
+    .signin-header,
+    .signup-header{
+        height: 4rem;
+    }
+
     .showcase .showcase-grid{
         grid-template-columns: 2fr 1fr;
         margin-top: 40px;
@@ -313,14 +383,27 @@ img{
     .testimonial .testimonial-grid{
         gap: 2%;
     }
+    .signin,
+    .signup{
+        padding-top: 90px;
+    }
+
+    .signin img,
+    .signup img{
+        width: 80px;
+    }
+
+    .signin .signin-flex,
+    .signup .signup-flex{
+        flex-direction: column;
+        gap: 20px;
+    }
+    
 }
 
 /*Mobile*/
 @media  screen and (max-width: 580px) {
 
-    .home-header{
-        height: 4rem;
-    }
     .home-header .container ul{
         display: flex;
         gap: 10px;
@@ -351,3 +434,4 @@ img{
         gap: 1%;
     }
 }
+
