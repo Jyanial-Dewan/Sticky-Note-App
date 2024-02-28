@@ -35,7 +35,8 @@ img{
 
 .home-header .container,
 .signin-header .container,
-.signup-header .container{
+.signup-header .container,
+.app-header .container{
     height: 100%;
     width: 86%;
     margin: 0 auto;
@@ -46,20 +47,23 @@ img{
 
 .home-header .container ul,
 .signin-header .container ul,
-.signup-header .container ul{
+.signup-header .container ul,
+.app-header .container ul{
     display: flex;
     gap: 15px;
 }
 
 .home-header .container ul li a,
 .signin-header .container ul li a,
-.signup-header .container ul li a{
+.signup-header .container ul li a,
+.app-header .container ul li a{
     padding-bottom: 3px;
 }
 
 .home-header .container ul li a:hover,
 .signin-header .container ul li a:hover,
-.signup-header .container ul li a:hover{
+.signup-header .container ul li a:hover,
+.app-header .container ul li a:hover{
     border-bottom: 2px solid black;
 }
 
@@ -79,6 +83,16 @@ img{
     width: 100%;
     height: 5rem;
     background: hsl(59, 54%, 70%);
+    position: fixed;
+    z-index: 10;
+}
+
+/*App Header*/
+
+.app-header{
+    width: 100%;
+    height: 5rem;
+    background: hsl(169, 54%, 70%);
     position: fixed;
     z-index: 10;
 }
@@ -255,7 +269,102 @@ img{
     cursor: pointer;
     transform: scale(1.1);
 }
-  
+
+/*App*/
+
+.app{
+    height: 100vh;
+    width: 100%;
+    background: hsl(169, 54%, 65%);
+    padding-top: 100px;
+}
+
+.app .container{
+    display: flex;
+    justify-content: center;
+}
+
+.app .app-flex{
+    
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.app .app-flex .form-header{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.app .app-flex .form{
+    background: transparent;
+    width: 350px;
+    height: auto;
+    padding: 0.5rem 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+    
+
+.app .app-flex .form input{
+    border: none;
+    width: 80%;
+    background: white;
+    border-radius: 10px;
+    padding: 0 30px;
+}
+
+.app .app-flex .task-list{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.5rem 1.1rem;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+
+.task-container{
+    background: transparent;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    /**/
+    
+}
+
+.task-container p{
+    width: 80%;
+    height: auto;
+    padding: 5px 10px;
+    background: white;
+    border-radius: 10px;
+    font-family: 'Caveat', sans-serif;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.task-container button{
+   cursor: pointer;
+   background: transparent;
+}
+
+.task-container button img{
+    width: 30px;
+    height: 30px;
+}
+   
+
+
+
 
 
 /*Utility Classes*/
@@ -290,6 +399,10 @@ img{
 .btn-block{
     width: 95%;
     margin: auto;
+}
+
+.btn-add{
+    padding: 0.5rem 0.8rem;
 }
 
 
